@@ -1,0 +1,35 @@
+/* style.css */
+/* Hero Section with custom background pattern */
+.hero-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ctext x='5' y='25' font-size='20' opacity='0.2'%3E%F0%9F%8D%AA%3C/text%3E%3Ctext x='45' y='65' font-size='20' opacity='0.2'%3E%F0%9F%8D%8E%3C/text%3E%3C/svg%3E");
+    background-size: 80px;
+}
+
+/* Testimonials Section with custom background pattern */
+.testimonials-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ctext x='5' y='25' font-size='20' opacity='0.1'%3E%F0%9F%8D%AA%3C/text%3E%3Ctext x='45' y='65' font-size='20' opacity='0.1'%3E%F0%9F%8D%B0%3C/text%3E%3C/svg%3E");
+    background-size: 80px;
+}
+
+/* Custom animation for the floating button */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Ensure images in the gallery fill their containers */
+.about-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

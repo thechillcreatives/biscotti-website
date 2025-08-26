@@ -21,24 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-        }
-
-        /* Hero Section with custom background pattern */
-        .hero-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ctext x='5' y='25' font-size='20' opacity='0.2'%3E%F0%9F%8D%AA%3C/text%3E%3Ctext x='45' y='65' font-size='20' opacity='0.2'%3E%F0%9F%8D%8E%3C/text%3E%3C/svg%3E");
-            background-size: 80px;
-        }
-
-        /* Testimonials Section with custom background pattern */
-        .testimonials-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ctext x='5' y='25' font-size='20' opacity='0.1'%3E%F0%9F%8D%AA%3C/text%3E%3Ctext x='45' y='65' font-size='20' opacity='0.1'%3E%F0%9F%8D%B0%3C/text%3E%3C/svg%3E");
-            background-size: 80px;
-        }
-    </style>
+    <!-- Link to the new external stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased text-slate-800">
 
@@ -69,7 +53,7 @@
                     Handmade Sweetness, Baked with Love.
                 </h1>
                 <p class="text-lg sm:text-xl font-light mb-8 max-w-2xl mx-auto">
-                    Homemade cookies & cakes 🍪🧁, made to order for your perfect occasion.
+                    Homemade cookies & cakes 🍪🍰 made to order for your perfect occasion.
                 </p>
                 <a href="#contact" class="bg-white text-rose-500 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                     Order Now
@@ -111,7 +95,7 @@
         <!-- About Section -->
         <section id="about" class="py-16 sm:py-24">
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                <!-- The new image gallery -->
+                <!-- The new image gallery with real photos -->
                 <div class="md:w-1/2 grid grid-cols-2 gap-4 rounded-xl shadow-xl transition-transform duration-300 hover:scale-105 p-4 bg-rose-50">
                     <!-- The w-full and h-auto classes ensure the images fill their container and maintain aspect ratio. -->
                     <!-- Update the href to your Instagram post URL -->
@@ -150,18 +134,57 @@
                     <!-- Testimonial 1 -->
                     <!-- Updated border color to rose-500 -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500">
+                        <!-- Add a client avatar and 5-star rating -->
+                        <div class="flex items-center mb-4">
+                            <span class="text-5xl mr-4">😋</span>
+                            <div>
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
                         <p class="text-slate-700 italic mb-4">"Absolutely incredible service! Biscotti transformed my idea into a reality with such professionalism and creativity."</p>
                         <p class="font-semibold text-rose-800">- Jane Doe, CEO</p>
                     </div>
                     <!-- Testimonial 2 -->
                     <!-- Updated border color to rose-500 -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500">
+                        <!-- Add a client avatar and 5-star rating -->
+                        <div class="flex items-center mb-4">
+                            <span class="text-5xl mr-4">🍪</span>
+                            <div>
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
                         <p class="text-slate-700 italic mb-4">"The team was responsive and truly listened to my needs. The final product exceeded all my expectations."</p>
                         <p class="font-semibold text-rose-800">- John Smith, Founder</p>
                     </div>
                     <!-- Testimonial 3 -->
                     <!-- Updated border color to rose-500 -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500">
+                        <!-- Add a client avatar and 5-star rating -->
+                        <div class="flex items-center mb-4">
+                            <span class="text-5xl mr-4">🍰</span>
+                            <div>
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
                         <p class="text-slate-700 italic mb-4">"A seamless and enjoyable experience from start to finish. I highly recommend Biscotti to anyone!"</p>
                         <p class="font-semibold text-rose-800">- Sarah Lee, Consultant</p>
                     </div>
@@ -189,13 +212,18 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <p class="text-sm text-slate-600 mb-2">Pre-order 3-7 days ahead. Delivery & pick up available 🇱🇧.</p>
+                        <p class="text-sm text-slate-600 mb-2">Pre-order 3-7 days ahead. Delivery & pick up available 🚚📦.</p>
                     </div>
                 </div>
             </div>
         </section>
 
     </main>
+    
+    <!-- Floating "Order Now" Button -->
+    <a href="#contact" class="fixed bottom-4 right-4 bg-rose-500 text-white font-bold py-3 px-6 rounded-full shadow-xl hover:bg-rose-600 transition-colors duration-300 transform hover:scale-105 z-50 animate-pulse">
+        Order Now
+    </a>
 
     <!-- Footer Section -->
     <footer class="bg-slate-800 text-white py-8 text-center">
