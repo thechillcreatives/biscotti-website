@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBBL3BRJNC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BBBL3BRJNC');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biscotti Menu</title>
+    <!-- Use Tailwind CSS for a modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Google Fonts for a fun, creative font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom styles to match the Biscotti brand */
+        .rose-brand {
+            color: #E11D48;
+        }
+        .bg-rose-brand {
+            background-color: #E11D48;
+        }
+
+        /* Fun, playful font for titles */
+        .font-pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* A subtle pulsing animation for the header text */
+        @keyframes pulse-pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse-pop-animation {
+            animation: pulse-pop 2s ease-in-out infinite;
+        }
+
+        /* Card hover effect */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-gray-100 to-rose-50 antialiased text-slate-800">
+
+    <!-- Header with a more playful design -->
+    <header class="bg-white shadow-lg py-6 sm:py-8 rounded-b-3xl">
+        <div class="container mx-auto px-4 text-center">
+            <!-- The logo is now a link back to the home page -->
+            <a href="index.html" class="inline-block">
+                <!-- Removed the 'animate-pulse' class to fix the disappearing/reappearing effect -->
+                <img src="logo.png" alt="Biscotti Logo" class="mx-auto h-20 mb-4 transition-transform duration-300 hover:scale-105">
+            </a>
+            <h1 class="text-5xl sm:text-6xl font-pacifico text-rose-800 pulse-pop-animation">Biscotti</h1>
+            <p class="text-xl sm:text-2xl font-bold mt-2">Your Sweet Escape 🍰</p>
+        </div>
+    </header>
+
+    <main class="py-12 sm:py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+
+            <!-- Category: Homemade Cookies -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-6 text-rose-800 border-b-4 border-rose-300 pb-2">🍪 Homemade Cookies</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-rose-500 transition-all duration-300 card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-semibold">Classic Chocolate Chip</h3>
+                            <span class="text-xl font-bold text-rose-600">$3.00</span>
+                        </div>
+                        <p class="text-base text-slate-600">A timeless classic with rich, gooey chocolate chips in a chewy cookie, baked to perfection.</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-rose-500 transition-all duration-300 card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-semibold">Oatmeal Raisin Bliss</h3>
+                            <span class="text-xl font-bold text-rose-600">$3.00</span>
+                        </div>
+                        <p class="text-base text-slate-600">Soft, hearty oatmeal cookies with plump raisins and a whisper of cinnamon for a cozy treat.</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-rose-500 transition-all duration-300 card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-semibold">Peanut Butter Dream</h3>
+                            <span class="text-xl font-bold text-rose-600">$3.25</span>
+                        </div>
+                        <p class="text-base text-slate-600">Rich, nutty peanut butter cookies with a melt-in-your-mouth texture that will satisfy any craving.</p>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-rose-500 transition-all duration-300 card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-semibold">White Chocolate Macadamia</h3>
+                            <span class="text-xl font-bold text-rose-600">$3.50</span>
+                        </div>
+                        <p class="text-base text-slate-600">A buttery cookie filled with creamy white chocolate chunks and crunchy macadamia nuts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category: Custom Cakes -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-6 text-rose-800 border-b-4 border-rose-300 pb-2">🎂 Custom Cakes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-rose-500 transition-all duration-300 card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-semibold">Classic Vanilla Cake</h3>
+                            <span class="text-xl font-bold text-rose-600">Quote</span>
+                        </div>
+                        <p class="text-base text-slate-600">Moist vanilla bean cake with a light, fluffy vanilla buttercream frosting. Customize your design!</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-rose-500 transition-all duration-300 card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-semibold">Rich Chocolate Cake</h3>
+                            <span class="text-xl font-bold text-rose-600">Quote</span>
+                        </div>
+                        <p class="text-base text-slate-600">Decadent dark chocolate cake layered with rich chocolate ganache or your choice of filling.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category: Biscotti -->
+            <section>
+                <h2 class="text-3xl font-bold mb-6 text-rose-800 border-b-4 border-rose-300 pb-2">☕ Biscotti</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-rose-500 transition-all duration-300 card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-semibold">Almond & Anise</h3>
+                            <span class="text-xl font-bold text-rose-600">$2.50</span>
+                        </div>
+                        <p class="text-base text-slate-600">A traditional Italian favorite with toasted almonds and a delicate hint of anise.</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-rose-500 transition-all duration-300 card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-semibold">Pistachio & Cranberry</h3>
+                            <span class="text-xl font-bold text-rose-600">$2.75</span>
+                        </div>
+                        <p class="text-base text-slate-600">Sweet and nutty with bursts of tart cranberry. Perfect for coffee dipping!</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-sm">&copy; <span id="year"></span> Biscotti. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

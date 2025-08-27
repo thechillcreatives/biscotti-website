@@ -15,38 +15,52 @@
     <title>Biscotti Landing Page</title>
     <!-- Use Tailwind CSS for a modern, responsive design -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Google Fonts for a clean font, like Inter -->
+    <!-- Use Google Fonts for a clean font, like Inter and Pacifico for the new header -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Link to the new external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .custom-font-style {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+
+        @keyframes pulse-pop {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        .pulse-pop-animation {
+            animation: pulse-pop 2s ease-in-out infinite;
+        }
+    </style>
 </head>
-<body class="antialiased text-slate-800">
+<body class="antialiased text-slate-800 custom-font-style">
 
     <!-- Header Section -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
-            <!-- Logo source updated back to logo.png -->
-            <a href="#" class="rounded-lg transition-transform duration-300 hover:scale-105">
-                <img src="logo.png" alt="Biscotti Logo" class="w-16 h-auto rounded-full">
+    <header class="bg-white shadow-lg py-6 sm:py-8 rounded-b-3xl">
+        <div class="container mx-auto px-4 text-center">
+            <!-- The logo is now a link back to the home page -->
+            <a href="index.html" class="inline-block">
+                <img src="logo.png" alt="Biscotti Logo" class="mx-auto h-20 mb-4 transition-transform duration-300 hover:scale-105">
             </a>
-            <nav class="mt-4 sm:mt-0">
-                <ul class="flex space-x-4 sm:space-x-6">
-                    <li><a href="#services" class="text-sm font-medium text-slate-700 hover:text-rose-500 transition-colors duration-300">Products</a></li>
-                    <li><a href="#about" class="text-sm font-medium text-slate-700 hover:text-rose-500 transition-colors duration-300">About</a></li>
-                    <li><a href="#testimonials" class="text-sm font-medium text-slate-700 hover:text-rose-500 transition-colors duration-300">Testimonials</a></li>
-                    <li><a href="#contact" class="text-sm font-medium text-slate-700 hover:text-rose-500 transition-colors duration-300">Contact</a></li>
-                </ul>
-            </nav>
+            <h1 class="text-5xl sm:text-6xl font-pacifico text-rose-800 pulse-pop-animation">Biscotti</h1>
+            <p class="text-xl sm:text-2xl font-bold mt-2">Your Sweet Escape 🍰</p>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <!-- Updated color scheme to rose-500 -->
         <section class="bg-rose-500 text-white py-16 sm:py-24 text-center hero-bg">
             <div class="container mx-auto px-4">
                 <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight mb-4">
@@ -61,29 +75,38 @@
             </div>
         </section>
 
-        <!-- Services/Products Section -->
-        <section id="services" class="py-16 sm:py-24 bg-gray-50">
+        <!-- Menu Section -->
+        <section id="menu" class="py-16 sm:py-24 bg-gray-50 text-center">
             <div class="container mx-auto px-4">
-                <!-- Updated heading color -->
+                <h2 class="text-2xl sm:text-4xl font-bold text-center mb-6 text-rose-800">Explore the Biscotti Menu</h2>
+                <p class="text-md text-slate-600 mb-8 max-w-xl mx-auto">
+                    Take a look at all the delicious treats we offer, from our classic cookies to custom-designed cakes.
+                </p>
+                <a href="menu.html" class="inline-block bg-rose-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-rose-600 transition-colors duration-300">
+                    <i class="fas fa-cookie-bite mr-2"></i>View Full Menu
+                </a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-16 sm:py-24 bg-white">
+            <div class="container mx-auto px-4">
                 <h2 class="text-2xl sm:text-4xl font-bold text-center mb-12 text-rose-800">Our Products</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Product 1: Cookies -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <!-- Updated icon color -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                         <div class="text-rose-500 text-4xl mb-4 text-center"><i class="fas fa-cookie-bite"></i></div>
                         <h3 class="text-xl font-semibold mb-2 text-center">Homemade Cookies</h3>
                         <p class="text-sm text-slate-600 text-center">Freshly baked cookies made with high-quality ingredients, perfect for sharing or a sweet treat for yourself.</p>
                     </div>
                     <!-- Product 2: Cakes -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <!-- Updated icon color -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                         <div class="text-rose-500 text-4xl mb-4 text-center"><i class="fas fa-birthday-cake"></i></div>
                         <h3 class="text-xl font-semibold mb-2 text-center">Custom Cakes</h3>
                         <p class="text-sm text-slate-600 text-center">Beautiful and delicious custom-designed cakes for birthdays, weddings, or any special event. We bring your vision to life!</p>
                     </div>
                     <!-- Service 3: Ordering & Delivery -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <!-- Updated icon color -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                         <div class="text-rose-500 text-4xl mb-4 text-center"><i class="fas fa-truck"></i></div>
                         <h3 class="text-xl font-semibold mb-2 text-center">Easy Ordering & Delivery</h3>
                         <p class="text-sm text-slate-600 text-center">Simply pre-order 3-7 days ahead via Instagram or WhatsApp. We offer convenient delivery and pickup options.</p>
@@ -93,30 +116,23 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-16 sm:py-24">
+        <section id="about" class="py-16 sm:py-24 bg-gray-50">
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                <!-- The new image gallery with real photos -->
                 <div class="md:w-1/2 grid grid-cols-2 gap-4 rounded-xl shadow-xl transition-transform duration-300 hover:scale-105 p-4 bg-rose-50">
-                    <!-- The w-full and h-auto classes ensure the images fill their container and maintain aspect ratio. -->
-                    <!-- Update the href to your Instagram post URL -->
                     <a href="https://www.instagram.com/p/DJCCHM2CLCr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="block rounded-xl overflow-hidden group h-60">
                         <img src="p1.png" alt="Biscotti Product 1" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110">
                     </a>
-                    <!-- Update the href to your Instagram post URL -->
                     <a href="https://www.instagram.com/p/DHTjSXsig7z/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="block rounded-xl overflow-hidden group h-60">
                         <img src="p2.png" alt="Biscotti Product 2" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110">
                     </a>
-                    <!-- Update the href to your Instagram post URL -->
                     <a href="https://www.instagram.com/p/DFzl2oqCDX6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="block rounded-xl overflow-hidden group h-60">
                         <img src="p3.png" alt="Biscotti Product 3" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110">
                     </a>
-                    <!-- Update the href to your Instagram post URL -->
                     <a href="https://www.instagram.com/p/DGItOAKiwl6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="block rounded-xl overflow-hidden group h-60">
                         <img src="p4.png" alt="Biscotti Product 4" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110">
                     </a>
                 </div>
                 <div class="md:w-1/2">
-                    <!-- Updated heading color -->
                     <h2 class="text-2xl sm:text-4xl font-bold mb-4 text-rose-800">Our Story, Our Sweets</h2>
                     <p class="text-slate-600 leading-relaxed mb-4">We are more than just a bakery; we are a home of sweet creations. We invite you to visit our Instagram page to see our passion and dedication in every handcrafted cookie and cake we make. Each treat is a piece of art, baked with love and the finest ingredients.</p>
                     <p class="text-slate-600 leading-relaxed">Whether it's a small batch of cookies for an afternoon treat or a custom-designed cake for a grand celebration, we pour our heart into every creation. We can't wait to bake something special for you!</p>
@@ -125,16 +141,12 @@
         </section>
 
         <!-- Testimonials Section -->
-        <!-- Updated background color to rose-100 -->
-        <section id="testimonials" class="py-16 sm:py-24 bg-rose-100 testimonials-bg">
+        <section id="testimonials" class="py-16 sm:py-24 bg-white testimonials-bg">
             <div class="container mx-auto px-4">
-                <!-- Updated heading color -->
                 <h2 class="text-2xl sm:text-4xl font-bold text-center mb-12 text-rose-800">What Our Clients Say</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Testimonial 1 -->
-                    <!-- Updated border color to rose-500 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500">
-                        <!-- Add a client avatar and 5-star rating -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-l-4 border-rose-500">
                         <div class="flex items-center mb-4">
                             <span class="text-5xl mr-4">😋</span>
                             <div>
@@ -151,9 +163,7 @@
                         <p class="font-semibold text-rose-800">- Jane Doe, CEO</p>
                     </div>
                     <!-- Testimonial 2 -->
-                    <!-- Updated border color to rose-500 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500">
-                        <!-- Add a client avatar and 5-star rating -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-l-4 border-rose-500">
                         <div class="flex items-center mb-4">
                             <span class="text-5xl mr-4">🍪</span>
                             <div>
@@ -170,9 +180,7 @@
                         <p class="font-semibold text-rose-800">- John Smith, Founder</p>
                     </div>
                     <!-- Testimonial 3 -->
-                    <!-- Updated border color to rose-500 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-rose-500">
-                        <!-- Add a client avatar and 5-star rating -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-l-4 border-rose-500">
                         <div class="flex items-center mb-4">
                             <span class="text-5xl mr-4">🍰</span>
                             <div>
@@ -193,14 +201,12 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-16 sm:py-24">
+        <section id="contact" class="py-16 sm:py-24 bg-gray-50">
             <div class="container mx-auto px-4">
-                <!-- Updated heading color -->
                 <h2 class="text-2xl sm:text-4xl font-bold text-center mb-12 text-rose-800">Contact Us</h2>
                 <div class="bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
                     <p class="text-center text-slate-600 mb-6">The best way to order is by messaging us directly on Instagram or WhatsApp. We'll handle everything from there!</p>
                     
-                    <!-- Updated button colors to rose-500 -->
                     <div class="text-center">
                         <a href="https://wa.me/96170240046" target="_blank" class="bg-rose-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-rose-600 transition-colors duration-300 inline-flex items-center space-x-2">
                             <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
