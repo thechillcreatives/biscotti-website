@@ -33,3 +33,60 @@
     height: 100%;
     object-fit: cover;
 }
+
+
+        .custom-font-style {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+
+        @keyframes pulse-pop {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        .pulse-pop-animation {
+            animation: pulse-pop 2s ease-in-out infinite;
+        }
+
+        /* Enhanced focus styles for accessibility */
+        a:focus, button:focus {
+            outline: 2px solid #E11D48;
+            outline-offset: 2px;
+        }
+
+        /* Loading animation for images */
+        .img-loading {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        /* Enhanced hover effects */
+        .enhanced-hover {
+            transition: all 0.3s ease;
+        }
+        .enhanced-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(225, 29, 72, 0.4);
+        }
+
+        /* Improved focus states */
+        .focus\:ring-rose:focus {
+            box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.5);
+        }
